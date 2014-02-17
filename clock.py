@@ -3,5 +3,5 @@ import time
 
 screen.initScr()
 while True:
-    screen.sendStr(time.asctime())
+    screen.sendStr(time.asctime()[:16])
     time.sleep(1)
