@@ -53,12 +53,12 @@ for num in range(10**10):
     # Finds current time once in a while
     if num % 100 == 99:
         current_time = time.asctime()[11:19]
-        print_to_lcd(current_time, max_string)
+        print_to_lcd(current_time+"|"+str(num), max_string)
 
     if num > 2: count = highest_prim_fact(num)
     else: count = 0
     if count >= maximum:
         maximum = count
-        max_string = "{0}, {1}".format(count, num)
+        max_string = "{0}|{1}".format(count, num)
         a.write(max_string+"\n")
         print_to_lcd(current_time, max_string)
